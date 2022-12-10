@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking external CSS & JavaScript files-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="js/app.js"></script>
+
+    <title>Allyson West Final | N328</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <p>
+          N328 <br />Final <br />
+          Project
+        </p>
+        <p id="symbol">|</p>
+      </div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="link.html">Video</a>
+      </div>
+    </div>
+    <h2 id="visual-header">Visual Presentation</h2>
+
+    <!-- creating area for visual-->
+    <div class="visual">
+      <h4>Top-Selling PlayStation 4 Games <br> in North America VS Japan</h4>
+
+      <!-- beginning of chart-->
+      <svg width="500" height="300">
+        <!-- North American Chart-->
+        <rect
+          class="northAmerica"
+          id="bar0"
+          x="0"
+          y="50"
+          width="10"
+          height="102"
+        />
+        <rect
+          class="northAmerica"
+          id="bar1"
+          x="30"
+          y="50"
+          width="10"
+          height="102"
+        />
+        <rect
+          class="northAmerica"
+          id="bar2"
+          x="60"
+          y="50"
+          width="10"
+          height="102"
+        />
+
+        <rect
+          class="northAmerica"
+          id="bar3"
+          x="90"
+          y="50"
+          width="10"
+          height="102"
+        />
+        <rect
+          class="northAmerica"
+          id="bar4"
+          x="120"
+          y="50"
+          width="10"
+          height="102"
+        />
+        <rect
+          class="northAmerica"
+          id="bar5"
+          x="150"
+          y="50"
+          width="10"
+          height="102"
+        />
+
+        <rect
+          class="northAmerica"
+          id="bar6"
+          x="180"
+          y="50"
+          width="10"
+          height="102"
+        />
+        <rect
+          class="northAmerica"
+          id="bar7"
+          x="210"
+          y="50"
+          width="10"
+          height="102"
+        />
+        <rect
+          class="northAmerica"
+          id="bar8"
+          x="240"
+          y="50"
+          width="10"
+          height="102"
+        />
+        <rect
+          class="northAmerica"
+          id="bar9"
+          x="270"
+          y="50"
+          width="10"
+          height="102"
+        />
+
+        <!-- Japanese Chart -->
+        <rect class="Japan" id="bar10" x="15" y="50" width="10" height="102" />
+        <rect class="Japan" id="bar11" x="45" y="50" width="10" height="102" />
+        <rect class="Japan" id="bar12" x="75" y="50" width="10" height="102" />
+
+        <rect class="Japan" id="bar13" x="105" y="50" width="10" height="102" />
+        <rect class="Japan" id="bar14" x="135" y="50" width="10" height="102" />
+        <rect class="Japan" id="bar15" x="165" y="50" width="10" height="102" />
+
+        <rect class="Japan" id="bar16" x="195" y="50" width="10" height="102" />
+        <rect class="Japan" id="bar17" x="225" y="50" width="10" height="102" />
+        <rect class="Japan" id="bar18" x="255" y="50" width="10" height="102" />
+        <rect class="Japan" id="bar19" x="285" y="50" width="10" height="102" />
+
+        <!-- drawing axis-->
+        <line x1="0" x2="300" y1="153" y2="153" stroke="black"></line>
+        <line x1="0" x2="0" y1="153" y2="100" stroke="black"></line>
+
+        <!-- Making Labels -->
+        <div class="x-axis">
+          <p>Action</p>
+          <p>Shooter</p>
+          <p>Sports</p>
+          <p>RPG</p>
+          <p>Action-<br>Adventure</p>
+          <p>Fighting</p>
+          <p>Adventure</p>
+          <p>Racing</p>
+          <p>Platform</p>
+          <p>Misc.</p>
+        </div>
+        <div class="y-axis">
+          <p>50</p>
+          <p>25</p>
+          <p>0</p>
+        </div>
+      </svg>
+
+      <!-- Beginning JavaScript -->
+      <script type="text/JavaScript">
+
+        //filling arrays with data
+        var northAmerica = [ 48.15, 50.5, 33.31, 22.15, 22.30,8.58, 5.27, 5.86, 5.48, 3.64 ];
+        var Japan = [ 10.27, 4.42, 1.83, 9.42, 1.96, 1.67, 1.64, 0.76, 0.67, 0.96 ];
+
+        //selecting data for North America side of the chart
+        d3.select('svg').selectAll(".northAmerica").data(northAmerica)
+            .attr('height', function(data) {
+              return data;
+            })
+            .attr('y', function(d) {
+                return 102 - d + 50;
+            })
+
+            //selecting data for Japan side of the chart
+            d3.select('svg').selectAll(".Japan").data(Japan)
+            .attr('height', function(data) {
+              return data;
+            })
+            .attr('y', function(data) {
+                return 102 - data + 50;
+            })
+
+            .on('mouseover', function(d,i) {
+              console.log("mouseover on", this);
+            d3.select(this)
+              .transition()
+              .attr('fill', '#ff0000');
+            })
+
+            .on('mouseout', function(d,i) {
+              console.log("mouseover out", this);
+            d3.select(this)
+              .transition()
+              .attr('fill', '#999090');
+            })
+
+
+
+
+        /*
+        for (var i = 1; i <= 3; i++) {
+          var bar = document.GetElementById("bar" + i);
+          bar.setAttribute("height", pets[i-1]);
+          bar.setAttribute("y", 102 - pets[i-1] + 50);
+        }
+
+
+        //creating function to draw bar chart
+        function drawBarChart() {
+          var maxVal = d3.max(gameSales);
+
+          //select data to append
+          var selection = d3
+            .select("svg")
+            .select("g")
+            .selectAll("rect")
+            .data(record);
+
+          selection.enter().append("rect");
+        }
+
+        //retrieving csv file
+        d3.csv("gameSalesFinal.csv", function (data) {
+          var record = data[0];
+
+          for (var x = 0; x <= 10; x++) {
+            record = data[x];
+            console.log(record);
+          }
+
+          //calling function to draw chart on page
+          drawBarChart();
+        });
+        */
+      </script>
+    </div>
+    <!-- creating footer-->
+    <div class="footer">
+      <p>&copy; Allyson West N328 Final 2022</p>
+    </div>
+  </body>
+</html>

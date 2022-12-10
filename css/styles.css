@@ -1,0 +1,253 @@
+/* Styling sheet for N328 Final Project*/
+
+html, body {
+    height: 100%;
+    max-width: 100%;
+    background-color: #edeef0;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#4A4B4B;
+}
+
+/* Styling the nav bar & header */
+.navbar {
+    height: 150px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.logo {
+    height: 100px;
+    width: 130px;
+    display: flex;
+    position: relative;
+    right: 180px;
+    font-size: 25px;
+    padding: 5px;
+    /*background-color:#CCEAF5;*/
+}
+
+.logo p {
+    margin-top: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4A4B4B;
+}
+
+
+#symbol {
+    padding-top: 20px;
+    margin: 0 auto;
+    font-size: 40px;
+}
+
+.nav {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+a {
+    color: #4A4B4B;
+    text-decoration: underline;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    a:hover {
+        color:  #B4DDEC;
+    }
+
+
+/* Styling index/home page*/
+
+#visual-header {
+    height: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* Styling visual/SVG (on home page) */
+
+.visual {
+    height: 900px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: -100px auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.visual h4 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: -35px;
+}
+
+svg {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 250px;
+}
+
+svg line {
+    stroke:#252626;
+    stroke-width: 1px;
+}
+
+.northAmerica {
+    fill: #B4DDEC;
+}
+
+
+
+.x-axis {
+    margin-top: -270px;
+    margin-left: 40px;
+    transform: rotate(-90deg);
+    font-size: 9px;
+}
+
+.x-axis p {
+    padding: 5px;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    left: -140px;
+    top: -255px;
+    font-size: 9px;
+}
+
+.y-axis p {
+    margin: 5px;
+}
+/*
+svg {
+    background-color: #e8eaed;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: 400px;
+    margin-top: -10px;
+}
+*/
+
+/* Styling about page */
+
+.about-section {
+    height: 800px;
+    width: 1200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 200px 150px;
+}
+
+.about {
+    height: 300px;
+    width: 700px;
+    padding: 2px;
+    margin: 10px;
+}
+
+.about-section p {
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sketch {
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.sketch h4 {
+    font-size: 20px;
+}
+
+/* Styling video section*/
+
+.video-section {
+    height: 500px;
+    width: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.video-section h2 {
+    width: 500px;
+}
+
+.video {
+    background-color: #252626;
+    height: 500px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.video h4 {
+    height: 20px;
+    width: 100px;
+}
+
+
+/* Styling footer*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 20px;
+    width: 1450px;
+    margin-top: 300px;
+    overflow: hidden;
+    background-color: rgb(204,234,245,10);
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#4A4B4B;
+    margin-top: 5px;
+    font-size: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
