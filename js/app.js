@@ -9,10 +9,9 @@
 
 //setting canvas size
 function setup() {
-    canvas = createCanvas(200, 200);
+    canvas = createCanvas(200, 200,'shapeLogo');
     canvas.position(175,40);
 }
-
 function draw() {
 
     //orange quad

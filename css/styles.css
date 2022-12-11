@@ -4,6 +4,7 @@ html, body {
     height: 100%;
     max-width: 100%;
     background-color: #edeef0;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -22,6 +23,10 @@ h2 {
     padding: 10px;
 }
 
+.pSketch {
+    position: fixed;
+}
+
 .logo {
     height: 100px;
     width: 130px;
@@ -30,7 +35,7 @@ h2 {
     right: 180px;
     font-size: 25px;
     padding: 5px;
-    /*background-color:#CCEAF5;*/
+    margin-left: 35px;
 }
 
 .logo p {
@@ -88,29 +93,33 @@ a {
 
 .visual {
     height: 900px;
-    width: 900px;
+    width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: -100px auto;
+    margin: 0 auto;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
-.visual h4 {
+text {
     display: flex;
     justify-content: center;
+    align-content: center;
     text-align: center;
-    font-size: 10px;
-    margin-bottom: -35px;
+    margin-left: 75px;
+    margin-bottom: 5px;
+    width: 400px;
+    font-size: 14px;
 }
 
 svg {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-left: 250px;
+    margin-left: 75px;
+    background-color: #e8eaed;
 }
 
 svg line {
@@ -118,21 +127,35 @@ svg line {
     stroke-width: 1px;
 }
 
-.northAmerica {
-    fill: #B4DDEC;
+#legend {
+    width: 55px;
+    height: 50px;
+    fill: #edeef0;
+    stroke-width: 1px;
+    stroke: #252626;
 }
 
+.key {
+    width: 12px;
+    height: 10px;
+    stroke-width: 1px;
+    stroke: #252626;
+}
 
-
+.key-label {
+    font-size: 8px;
+    color: #252626;
+    
+}
 .x-axis {
-    margin-top: -270px;
-    margin-left: 40px;
+    margin-top: -282px;
+    margin-left: 100px;
     transform: rotate(-90deg);
     font-size: 9px;
 }
 
 .x-axis p {
-    padding: 5px;
+    padding-bottom: 30px;
 }
 
 .y-axis {
@@ -140,24 +163,17 @@ svg line {
     flex-direction: column;
     text-align: center;
     position: relative;
-    left: -140px;
-    top: -255px;
+    left: -225px;
+    top: -345px;
     font-size: 9px;
 }
 
 .y-axis p {
-    margin: 5px;
+    margin: 6px;
+    padding: -8px;
 }
-/*
-svg {
-    background-color: #e8eaed;
-    display: flex;
-    justify-content: center;
-    width: 800px;
-    height: 400px;
-    margin-top: -10px;
-}
-*/
+
+
 
 /* Styling about page */
 
