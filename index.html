@@ -38,10 +38,11 @@
       <svg id = "svgChart" width="500" height="300">
         <rect id = "legend" x = "425" y ="10">
         </rect>
-        <rect class = "key" x = "435" y = "20" fill = "#CCEAF5"></rect>
-        <text class = "key-label" x = "455" y = "25"> N.A </text>
-        <rect class = "key" x = "435" y = "45" fill = "#614051"></rect>
-        <text class = "key-label" x = "455" y = "50"> Japan </text>
+        <text class = "key-label" x = "440" y = "18"> Countries </text>
+        <rect class = "key" x = "435" y = "30" fill = "#CCEAF5"></rect>
+        <text class = "key-label" x = "455" y = "35"> N.A </text>
+        <rect class = "key" x = "435" y = "55" fill = "#614051"></rect>
+        <text class = "key-label" x = "455" y = "60"> Japan </text>
         <!-- North American Chart-->
         <rect
           class="northAmerica"
@@ -197,7 +198,7 @@
               console.log("mouseover on", this);
             d3.select(this)
               .transition()
-              .attr('fill', '#F0A53F');
+              .attr('fill', "rgb(240, 165, 3, 1)");
             })
 
             .on('mouseout', function(d,i) {
