@@ -230,6 +230,7 @@ svg line {
     width: 500px;
 }
 
+/*
 .video {
     background-color: #252626;
     height: 500px;
@@ -239,7 +240,7 @@ svg line {
     align-items: center;
     margin-top: 15px;
 }
-
+*/
 .video h4 {
     height: 20px;
     width: 100px;
